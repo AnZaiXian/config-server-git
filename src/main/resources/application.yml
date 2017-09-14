@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AnZaiXian/config
+
+
+
+    # 配置git仓库的地址
+         # search-paths: config-repo
+    # git仓库地址下的相对地址，可以配置多个，用,分割。
+         # username: username
+    # git仓库的账号 git仓库的密码
+          #password: password
+
+server:
+  port: 1201
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://wrx:123456@peer1:8080/eureka/
+      # 注册中心eurka地址http://user:password@localhost:2002/eureka/
+      #实现服务注册中心的高使用http://wrx:123456@peer1:8080/eureka/
+      #单个服务和客户端的注册http://localhost:1001/eureka/
+
+
+
+
+
+
+
+
